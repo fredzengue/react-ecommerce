@@ -1,11 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-blue-600 text-center">
-      Hello world!
-    </h1>
+  <div className='header'>
+      <ul class="flex">
+        <h1>bonjour</h1>
+        <FontAwesomeIcon icon={faCoffee}>
+
+        </FontAwesomeIcon>
+      </ul>
+      <ul class="flex">
+       
+      </ul>
+  </div>
   );
 }
 
