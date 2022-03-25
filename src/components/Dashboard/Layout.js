@@ -1,14 +1,27 @@
 import React from 'react';
-import Oders from './Oders';
-import Profile from './Profile';
+
 
 const Layout = () => {
     return (
-        <div>
-            <h1>Layout</h1>
-            <Oders/>
-            <Profile/>
-        </div>
+     <div>
+         <div>
+            <ul>
+                <li>Home</li>
+                <li>shop</li>
+                <li>my Acount</li>
+            </ul>
+            <h1>MY ACCOUNT</h1>
+         </div>
+         <div>
+         <ul>
+                <li>Profile</li>
+                <li>Oders</li>
+                <li>Adresses</li>
+                <li>whishlist</li>
+                <li>logout</li>
+            </ul>
+         </div>
+     </div>
     );
 };
 
