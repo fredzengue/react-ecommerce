@@ -23,21 +23,23 @@ i18n
             part1: 'Edit <1>src/App.js</1> and save to reload.',
             part2: 'Learn React'
           },
-          exemple:{
-              title: 'title'
+          layout:{
+              search_placeholder: 'search',
+              contact_info_title: 'call us now'
           }
 
         }
       },
-      de: {
+      fr: {
         translation: {
           description: {
             part1: 'Ändere <1>src/App.js</1> und speichere um neu zu laden.',
             part2: 'Lerne React'
-          },
-          exemple:{
-            title: 'titre'
-        }
+        },
+        layout: {
+            search_placeholder: 'recherche',
+            contact_info_title: 'contactez nous'
+            }
         }
       }
     }

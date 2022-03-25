@@ -2,13 +2,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
+//import flag icon
+
+import Flags from 'country-flag-icons/react/3x2';
 
 
 //import translation 
 import { useTranslation, Trans } from 'react-i18next';
 const lngs = {
   en: { nativeName: 'English' },
-  de: { nativeName: 'Deutsch' }
+  fr: { nativeName: 'French' }
 };
 
 function App() {
@@ -16,7 +19,6 @@ function App() {
 
   return (
   <div className='flex'>
-    
     <img src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
     <div>
           {Object.keys(lngs).map((lng) => (
@@ -36,8 +38,8 @@ function App() {
     <div className="contact-info">
       <FontAwesomeIcon icon={faPhoneAlt}></FontAwesomeIcon>
       <p>
-        <h3> {t('description.part2')}</h3>
-        <h2>{t('exemple.title')}</h2>
+        <h3>{t('layout.search_placeholder')}</h3>
+        <h2>{t('layout.contact_info_title')}</h2>
         <h3><strong>+123 5535 3663</strong></h3>
       </p>
     </div>
