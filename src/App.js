@@ -1,17 +1,49 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-function App() {
-  return (
-  <div className='header'>
-      <ul class="flex">
-        <h1>bonjour</h1>
-        <FontAwesomeIcon icon={faCoffee}>
 
-        </FontAwesomeIcon>
-      </ul>
-      <ul class="flex">
-       
-      </ul>
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+
+
+
+//import translation 
+import { useTranslation, Trans } from 'react-i18next';
+const lngs = {
+  en: { nativeName: 'English' },
+  de: { nativeName: 'Deutsch' }
+};
+
+function App() {
+  const { t, i18n } = useTranslation();
+
+  return (
+  <div className='flex'>
+    
+    <img src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
+    <div>
+          {Object.keys(lngs).map((lng) => (
+            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {lngs[lng].nativeName}
+            </button>
+          ))}
+        </div>
+    <div className="form">
+      <form action="">
+        <div>
+          <input type="text" placeholder='Search...' />
+          <button></button>
+        </div>
+      </form>
+    </div>
+    <div className="contact-info">
+      <FontAwesomeIcon icon={faPhoneAlt}></FontAwesomeIcon>
+      <p>
+        <h3> {t('description.part2')}</h3>
+        <h2>{t('exemple.title')}</h2>
+        <h3><strong>+123 5535 3663</strong></h3>
+      </p>
+    </div>
+    <div className='nav-icon'>
+    <FontAwesomeIcon icon="fab fa-facebook" />
+    </div>
   </div>
   );
 }
