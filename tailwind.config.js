@@ -9,7 +9,11 @@ module.exports = {
     },
     colors: {
       'white': '#fff',
-      'gray': '#a8a8a8',
+      'gray': {
+        'low': '#a8a8a8',
+        'middle': '#777',
+        'strong': '#555'
+      },
       'red': '#ff5b5b',
       'blue': '#08C',
       'green': '#2ba968',
@@ -18,13 +22,6 @@ module.exports = {
       'input': '#f4f4f4',
       'divider': '#e7e7e7'
 
-    },
-    variants : {
-      colors : {
-        'gray-low': '#a8a8a8',
-        'gray-middle': '#777',
-        'gray-strong': '#555'
-      }
     }
   },
   plugins: [
