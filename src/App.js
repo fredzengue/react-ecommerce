@@ -1,11 +1,5 @@
 
-import React from 'react';
-import Logout from './components/Dashboard/Logout';
-
-
-
-
-
+import Profile from './components/Dashboard/Profile';
 
 
 
@@ -14,7 +8,7 @@ function App() {
 
   return (
   <div>
-  <Logout/>
+  <Profile/>
   </div>
   );
 }

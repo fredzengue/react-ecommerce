@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Layout from './components/Layout';
 import reportWebVitals from './reportWebVitals';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
+import Logout from './components/Dashboard/Logout';
+
 
 ReactDOM.render(
 
   <React.StrictMode>
     
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />} />
+      <Route path="expenses" element={<Cart />} />
+      <Route path="invoices" element={<Cart />} />
+      <Route path="login" element={<Logout />} />
+    </Routes>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

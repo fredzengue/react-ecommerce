@@ -1,8 +1,9 @@
 import React from 'react';
-
+import Layout from '../Layout';
 const Logout = () => {
     return (
-        <div className='w-3/4 :w-full mx-auto bg-red-400 py-8'>
+        <Layout>
+<div className='w-3/4 :w-full mx-auto bg-red-400 py-8'>
             <h1 className='font-bold text-center capitalize text-2xl mb-7'>Connectez-Vous</h1>
               <form>
                    <div className=''>
@@ -26,6 +27,8 @@ const Logout = () => {
                     </div>
                 </form>
         </div>
+        </Layout>
+        
     );
 };
 
