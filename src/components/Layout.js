@@ -8,13 +8,13 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+import Cart from './cart/Index'
 import {
   BrowserRouter,
   Routes,
   Route,
   Link
 } from "react-router-dom";
-import Cart from './cart/Index'
 //import flag icon
 import Flags from 'country-flag-icons/react/3x2';
 
@@ -30,29 +30,33 @@ const lngs = {
 };
 function App() {
   const { t, i18n } = useTranslation();
+  
+  const [show_cart, setShowCart] = useState(false);
   const [show, setShow] = useState(false);
-
+ 
   function handleClick() {
     setShow(!show)
   }
+  
 
   return (
     <>
-      <div className='flex items-center justify-center mx-auto w-9/12 flex-auto text-gray-700 py-4'>
+      <Cart show = {show_cart} />
+      <div className='flex items-center justify-center mx-auto w-9/12 flex-auto text-gray py-4'>
         <img className='w-max' src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
         <div className="ml-8 w-auto flex-1">
           <form action="">
             <div className='flex w-full'>
-              <input type="text" className='w-full px-6 rounded-full rounded-r-none border-none bg-gray-200 focus:ring-0 focus:border-0   placeholder:text-gray-400 ' placeholder={t('layout.search_placeholder')} />
-              <button className='border-2 rounded-full rounded-l-none bg-gray-200 border-none text-gray-700 py-2 px-3'><FontAwesomeIcon icon={faSearch} /></button>
+              <input type="text" className='w-full px-6 rounded-full rounded-r-none border-none bg-input focus:ring-0 focus:border-0   placeholder:text-gray ' placeholder={t('layout.search_placeholder')} />
+              <button className='border-2 rounded-full rounded-l-none bg-input border-none text-icon py-2 px-3'><FontAwesomeIcon icon={faSearch} /></button>
             </div>
           </form>
         </div>
         <div className="flex items-center ml-8 w-max">
-          <FontAwesomeIcon className='text-3xl mr-1 rotate-90' icon={faPhoneAlt}></FontAwesomeIcon>
+          <FontAwesomeIcon className='text-3xl mr-1 rotate-90 text-icon' icon={faPhoneAlt}></FontAwesomeIcon>
           <p>
             <h1 className='uppercase text-sm'>{t('layout.contact_info_title')}</h1>
-            <h1 className='text-lg'><strong>+123 5535 3663</strong></h1>
+            <h1 className='text-lg text-dark'><strong>+123 5535 3663</strong></h1>
           </p>
         </div>
 
@@ -71,9 +75,9 @@ function App() {
         </ul>
 
       </div>
-      <div className='flex items-center justify-between mx-auto w-9/12 flex-auto text-gray-700 border-gray-200 border-t py-4'>
+      <div className='flex items-center justify-between mx-auto w-9/12 flex-auto border-divider border-t py-4'>
         <ul className='flex '>
-          <li className='py-4 cursor-pointer font-bold border-t-2 border-blue-500 capitalize'><Link to="/invoices">home</Link></li>
+          <li className='py-4 cursor-pointer font-bold border-t-2 border-blue capitalize'><Link to="/invoices">home</Link></li>
           <li className='py-4 cursor-pointer hover:border-blue-500 mx-6 border-t-2 border-white font-bold capitalize'>
             <Dropdown title={'categories'}>
               <ul className='absolute shadow-sm shadow-slate-400 text-sm bg-white'>
@@ -88,10 +92,12 @@ function App() {
         <ul className='flex'>
           <li className='py-4 text-2xl cursor-pointer'> <FontAwesomeIcon className='' icon={faUser} /></li>
           <li className='py-4 px-4 text-2xl cursor-pointer'> <FontAwesomeIcon className='' icon={faHeart} /></li>
-          <li className='py-4 text-2xl cursor-pointer relative'> <FontAwesomeIcon className='' icon={faBagShopping} /><span className='text-sm rounded-full bg-red-600 text-white leading-none px-1 absolute left-4 top-6'>3</span><FontAwesomeIcon className='text-sm ml-3' icon={faChevronLeft} /></li>
+          <li className='py-4 text-2xl cursor-pointer relative' onClick={()=> setShowCart(!show_cart)}> <FontAwesomeIcon className='' icon={faBagShopping} /><span className='text-sm rounded-full bg-red-600 text-white leading-none px-1 absolute left-4 top-6'>3</span><FontAwesomeIcon className='text-sm ml-3' icon={faChevronLeft} /></li>
         </ul>
       </div>
-      <div className='text-gray-500 text-sm bg-slate-900 absolute bottom-0 w-full pt-20 pb-4'>
+        
+      
+      <div className='text-gray text-sm bg-dark absolute bottom-0 w-full pt-20 pb-4'>
         <div className='flex justify-between mx-auto w-9/12 border-b'>
           <ul>
             <h1 className='uppercase text-xl text-white pb-4'>Contact infos</h1>
@@ -124,7 +130,7 @@ function App() {
 
           <div>
             <h1 className='uppercase text-xl text-white pb-4'>popular tags</h1>
-            <ul className='grid grid-cols-5 gap-2'>
+            <ul className='grid grid-cols-5 gap-2 text-center'>
               <li className='border border-gray-40 px-2'>bag</li>
               <li className='border border-gray-40 px-2'>lo</li>
               <li className='border border-gray-40 px-2'>lo</li>
