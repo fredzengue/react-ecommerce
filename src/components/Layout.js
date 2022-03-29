@@ -28,7 +28,7 @@ const lngs = {
   en: { nativeName: 'English', icon: <Flags.US title="United States" className="w-5" /> },
   fr: { nativeName: 'French', icon: <Flags.FR title="United States" className="w-5" /> }
 };
-function App() {
+function App(props) {
   const { t, i18n } = useTranslation();
   
   const [show_cart, setShowCart] = useState(false);
@@ -42,12 +42,12 @@ function App() {
   return (
     <>
       <Cart show = {show_cart} />
-      <div className='flex items-center justify-center mx-auto w-9/12 flex-auto text-gray py-4'>
+      <div className='flex items-center justify-center mx-auto w-9/12 flex-auto text-gray-low py-4'>
         <img className='w-max' src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
         <div className="ml-8 w-auto flex-1">
           <form action="">
             <div className='flex w-full'>
-              <input type="text" className='w-full px-6 rounded-full rounded-r-none border-none bg-input focus:ring-0 focus:border-0   placeholder:text-gray ' placeholder={t('layout.search_placeholder')} />
+              <input type="text" className='w-full px-6 rounded-full rounded-r-none border-none text-gray-middle bg-input focus:ring-0 focus:border-0   placeholder:text-gray ' placeholder={t('layout.search_placeholder')} />
               <button className='border-2 rounded-full rounded-l-none bg-input border-none text-icon py-2 px-3'><FontAwesomeIcon icon={faSearch} /></button>
             </div>
           </form>
@@ -95,7 +95,7 @@ function App() {
           <li className='py-4 text-2xl cursor-pointer relative' onClick={()=> setShowCart(!show_cart)}> <FontAwesomeIcon className='' icon={faBagShopping} /><span className='text-sm rounded-full bg-red-600 text-white leading-none px-1 absolute left-4 top-6'>3</span><FontAwesomeIcon className='text-sm ml-3' icon={faChevronLeft} /></li>
         </ul>
       </div>
-        
+        {props.children}
       
       <div className='text-gray text-sm bg-dark absolute bottom-0 w-full pt-20 pb-4'>
         <div className='flex justify-between mx-auto w-9/12 border-b'>
