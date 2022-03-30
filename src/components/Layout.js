@@ -8,6 +8,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+
 import Cart from './cart/Index'
 import {
   BrowserRouter,
