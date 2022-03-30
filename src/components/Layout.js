@@ -9,7 +9,6 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useState , useEffect} from 'react';
 
-import Cart from './cart/Index'
 import {
   BrowserRouter,
   Routes,
@@ -88,7 +87,8 @@ function App(props) {
                 <button className='block w-full my-4 py-2 text-dark-low hover:opacity-75 bg-input uppercase'>view cart</button>
                 <button className='block w-full my-4 py-2 bg-dark-low hover:bg-dark-middle text-white uppercase'>checkout</button>
             </div>
-        </div> : null }
+        </div> : null 
+      }
       <div className="flex items-center justify-center mx-auto w-9/12 flex-auto text-gray-low py-4">
         <img
           className="w-max"
