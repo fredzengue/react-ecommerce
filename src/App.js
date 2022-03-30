@@ -1,5 +1,5 @@
 
-import Profile from './components/Dashboard/Profile';
+import Oders from './components/Dashboard/Oders';
 
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
   <div>
-  <Profile/>
+  <Oders/>
   </div>
   );
 }

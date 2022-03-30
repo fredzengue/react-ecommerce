@@ -97,7 +97,7 @@ function App(props) {
       </div>
         {props.children}
       
-      <div className='text-gray text-sm bg-dark absolute bottom-0 w-full pt-20 pb-4'>
+      <div className='text-gray text-sm bg-dark w-full pt-20 pb-4'>
         <div className='flex justify-between mx-auto w-9/12 border-b'>
           <ul>
             <h1 className='uppercase text-xl text-white pb-4'>Contact infos</h1>
