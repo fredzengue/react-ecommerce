@@ -18,9 +18,12 @@ module.exports = {
       'blue': '#08C',
       'green': '#2ba968',
       'opacity': 'rgba(0,0,0,0.4)',
-      'dark': '#222529',
+      'dark': {
+        'low': '#222529',
+        'middle' : '#313438'
+      },
       'input': '#f4f4f4',
-      'divider': '#e7e7e7'
+      'divider': '#e7e7e7',
 
     }
   },
