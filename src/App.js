@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 
+
 //import flag icon
 
 import Flags from 'country-flag-icons/react/3x2';
@@ -47,6 +48,7 @@ function App() {
     <div className='nav-icon'>
     <FontAwesomeIcon icon="fab fa-facebook" />
     </div>
+    
   </div>
   );
 }

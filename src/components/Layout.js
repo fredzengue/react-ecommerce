@@ -23,6 +23,8 @@ import { useTranslation, Trans } from 'react-i18next';
 
 import 'react-dropdown/style.css';
 import Dropdown from './utilities/Dropdown'
+import Contact from './contact/Contact'
+import SignUp from './authentification/SignUp'
 
 const lngs = {
   en: { nativeName: 'English', icon: <Flags.US title="United States" className="w-5" /> },
@@ -95,7 +97,7 @@ function App(props) {
           <li className='py-4 text-2xl cursor-pointer relative' onClick={()=> setShowCart(!show_cart)}> <FontAwesomeIcon className='' icon={faBagShopping} /><span className='text-sm rounded-full bg-red-600 text-white leading-none px-1 absolute left-4 top-6'>3</span><FontAwesomeIcon className='text-sm ml-3' icon={faChevronLeft} /></li>
         </ul>
       </div>
-      
+      <SignUp/>
       <div className='text-gray text-sm bg-dark w-full pt-20 pb-4'>
         <div className='flex justify-between mx-auto w-9/12 border-b'>
           <ul>

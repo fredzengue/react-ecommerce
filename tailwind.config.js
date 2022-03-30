@@ -21,7 +21,6 @@ module.exports = {
       'dark': '#222529',
       'input': '#f4f4f4',
       'divider': '#e7e7e7'
-
     }
   },
   plugins: [
