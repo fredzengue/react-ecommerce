@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function Index(props) {
-    function closeCart() {
-        props.show = false;
-    }
+    const [show, setShow] = useState(false);
+    useEffect(() => {
+        console.log(props.cart)
+      });
     return (
-        <div className={props.show ? "fixed w-full h-full bg-opacity z-50 " : "hidden w-full h-full bg-opacity z-50 "}>
+        <div className="fixed w-full h-full bg-opacity z-50">
             <div className='fixed h-full  w-1/4 bg-white right-0 opacity-100 py-7 px-4 shadow-2xl'>
-                <span className='absolute top-3 cursor-pointer text-white right-full pr-8 text-2xl ' onClick={() => closeCart()}>x</span>
+                <span className='absolute top-3 cursor-pointer text-white right-full pr-8 text-2xl ' onClick={() => setShow(!show)}>x</span>
                 <h1 className='uppercase text-dark-low text-xl font-bold pb-4'>shopping cart</h1>
                 <ul>
                     <li className='flex items-center justify-between gap-x-4 py-4 border-b-divider border-b'>
