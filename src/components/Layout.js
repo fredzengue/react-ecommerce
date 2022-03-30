@@ -183,7 +183,7 @@ function App(props) {
             <Link to="/expenses">about us</Link>
           </li>
           <li className="py-4 cursor-pointer hover:text-blue transition ease-out duration-200 hover:border-blue font-bold border-t-[3px] border-white  capitalize">
-            <Link to="/contact">contact us</Link>
+            <Link to="/expenses">contact us</Link>
           </li>
         </ul>
         <ul className="flex">

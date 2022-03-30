@@ -146,7 +146,7 @@ const SignIn = () => {
               </button>
               <button
                 type="submit"
-                className="mt-10 mb-6 ml-2 order-gray-500 text-center bg-gray-700/75 text-white  text-base py-4 px-8 hover:bg-gray-500 w-40"
+                className="mt-10 mb-6 ml-2 order-gray-500 text-center bg-gray-low text-white  text-base py-4 px-8 hover:bg-gray-middle w-40"
               >
                 Sign In
               </button>
