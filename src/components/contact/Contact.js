@@ -14,6 +14,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
+    <>
     <div className="block ">
       <div className="block w-screen  bg-gray-200 sm:w-full">
         <iframe
@@ -64,7 +65,7 @@ const Contact = () => {
       >
         <Form />
         <div className="basis-1/2 ">
-          <h1 className="text-2xl font-bold  text-black-600 ml-8">
+          <h1 className="text-2xl font-bold  text-dark-low ml-8">
             Les questions les plus fréquentes
           </h1>
           <div className="mt-8">
@@ -77,6 +78,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
