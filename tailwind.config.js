@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -5,7 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      fontFamily: {
+        'sans': ['-apple-system', ...defaultTheme.fontFamily.sans],
+      },
+      boxShadow: {
+        'close_btn' : '0 2px 6px rgb(0 0 0 / 50%)'
+      }
     },
     colors: {
       'white': '#fff',
