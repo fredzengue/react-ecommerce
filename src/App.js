@@ -21,7 +21,7 @@ function App() {
 
   return (
   <div className='flex'>
-    {/* <img src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
+    <img src="https://portotheme.com/html/porto_ecommerce/assets/images/logo.png" alt="" />
     <div>
           {Object.keys(lngs).map((lng) => (
             <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
@@ -48,7 +48,7 @@ function App() {
     <div className='nav-icon'>
     <FontAwesomeIcon icon="fab fa-facebook" />
     </div>
-     */}
+    
   </div>
   );
 }

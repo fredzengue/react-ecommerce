@@ -139,7 +139,7 @@ function App(props) {
             <Link to="/expenses">about us</Link>
           </li>
           <li className="py-4 cursor-pointer hover:text-blue transition ease-out duration-200 hover:border-blue font-bold border-t-[3px] border-white  capitalize">
-            <Link to="/contact">contact us</Link>
+            <Link to="/expenses">contact us</Link>
           </li>
         </ul>
         <ul className="flex">
@@ -164,7 +164,7 @@ function App(props) {
           </li>
         </ul>
       </div>
-
+      {props.children}
       <div className="text-gray-low text-sm bg-dark-low w-full pt-20 pb-4">
         <div className="flex justify-between mx-auto w-9/12 border-b">
           <ul>

@@ -14,26 +14,29 @@ const Collapse = ({ children, title }) => {
   return (
     <div>
       <dir>
-        <div className=" font-bold  text-dark-low w-full flex justify-between border-b-2 pb-4 hover:text-blue ">
+        <div className=" font-bold  text-dark-low w-full flex justify-between border-b-2 pb-4 hover:text-blue  ">
           <h6 onClick={handleFilterOpening} className={isOpen && "text-blue"}>{title}</h6>
-          <button type="button" className="btn" onClick={handleFilterOpening}>
+          <button type="button" className={isOpen && "btn text-blue"} onClick={handleFilterOpening}>
             {!isOpen ? (
               <FontAwesomeIcon icon={faChevronDown} />
             ) : (
-              <FontAwesomeIcon className="text-blue" icon={faChevronUp} />
+              <FontAwesomeIcon icon={faChevronUp} />
             )}
           </button>
         </div>
       </dir>
+      
       <div className="border-bottom">
         <div>
           {isOpen && (
-            <div className="p-1 ml-8 text-base text-gray-low mt-2 leading-normal text-justify">
+            <div 
+            className="p-1 ml-8 text-base text-gray-low mt-2 leading-normal text-justify transition">
               {children}
             </div>
           )}
         </div>
       </div>
+      
     </div>
   );
 };

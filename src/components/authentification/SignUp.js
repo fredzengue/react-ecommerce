@@ -190,7 +190,10 @@ const SignUp = () => {
                 {passswordIsVisible ? (
                   <FontAwesomeIcon icon={faEye} style={{ color: "#a8a8a8" }} />
                 ) : (
-                  <FontAwesomeIcon icon={faEyeSlash} style={{ color: "#a8a8a8" }} />
+                  <FontAwesomeIcon
+                    icon={faEyeSlash}
+                    style={{ color: "#a8a8a8" }}
+                  />
                 )}
               </div>
             </div>
@@ -242,7 +245,7 @@ const SignUp = () => {
             </button>
             <button
               type="submit"
-              className="mt-10 mb-6 ml-2 order-gray-500 text-center bg-gray-low text-white  text-base py-4 px-8 hover:bg-gray-middle w-40"
+              className="mt-10 mb-6 ml-2 order-gray-500 text-center bg-gray-middle text-white  text-base py-4 px-8 hover:bg-gray-strong w-40"
             >
               Sign Up
             </button>
