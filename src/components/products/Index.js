@@ -4,6 +4,9 @@ import Layout from '../Layout'
 import Breadcrumbs from '../utilities/Breadcrumb'
 import { faChevronDown, faTh } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faMinus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faListUl } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +14,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 
 import CustomSelect from '../utilities/CustomSelect'
+import Collapse from '../utilities/Collapse'
 export default function Index() {
     const [show_filter, setFilter] = useState(false)
     return (
@@ -20,8 +24,8 @@ export default function Index() {
                     <button className='leading-none py-4 px-6 uppercase bg-dark-low text-white hover:opacity-75 font-bold text-sm'>get yours!</button>
                 </div>
             </div>
-            <div className='w-9/12 mx-auto my-4'>
-                <Breadcrumbs prev={['men']} current='products' />
+            <div className='w-9/12 mx-auto mt-4 mb-10'>
+                <Breadcrumbs current='products' />
                 <div className='my-4 flex items-center justify-between'>
                     <div className='flex items-center gap-x-2'>
                         <label className='text-gray-middle uppercase'>filter</label>
@@ -48,9 +52,45 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <div className='my-4 flex'>
+                <div className='my-4 flex justify-between gap-x-4'>
                     <div className='w-1/4'>
-
+                        <ul className=''>
+                            <Collapse title='categories'>
+                                <ul>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                </ul>
+                            </Collapse>
+                            <Collapse title='prices'>
+                                <ul>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                </ul>
+                            </Collapse>
+                            <Collapse title='colors'>
+                                <ul>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                </ul>
+                            </Collapse>
+                            <Collapse title='sizes'>
+                                <ul>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                </ul>
+                            </Collapse>
+                            <Collapse title='features'>
+                                <ul>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                    <li className='py-1'>Accessories(3)</li>
+                                </ul>
+                            </Collapse>
+                        </ul>
                     </div>
                     <div className='grid w-3/4 grid-cols-4 gap-4'>
                         <div className='border border-divider text-center'>
@@ -265,6 +305,19 @@ export default function Index() {
                         </div>
                     </div>
 
+                </div>
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-x-2'>
+                        <label className='text-gray-middle uppercase'>show</label>
+                        <CustomSelect list={['40', '60', '70', '80', '100']} default='20' />
+                    </div>
+                    <div className='flex items-center gap-x-2 text-gray-middle font-bold'>
+                        <span className='border px-3 py-2 block leading-none border-blue cursor-pointer'>1</span>
+                        <span className='border border-divider px-3 py-2 block leading-none hover:border-blue cursor-pointer'>2</span>
+                        <span className='border border-divider px-3 py-2 block leading-none hover:border-blue cursor-pointer'>3</span>
+                        <span className=' px-3 py-2 block leading-none  cursor-pointer'>...</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </div>
                 </div>
             </div>
         </Layout>
