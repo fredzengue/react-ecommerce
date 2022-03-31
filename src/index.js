@@ -12,20 +12,14 @@ import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
 import Logout from './components/Dashboard/Logout';
+import App from './App';
+
 
 
 ReactDOM.render(
 
   <React.StrictMode>
-    
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />} />
-      <Route path="expenses" element={<Cart />} />
-      <Route path="invoices" element={<Cart />} />
-      <Route path="login" element={<Logout />} />
-    </Routes>
-  </BrowserRouter>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

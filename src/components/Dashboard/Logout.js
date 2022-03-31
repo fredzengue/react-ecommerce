@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../Layout';
+
 const Logout = () => {
     return (
-        <Layout>
-<div className='w-3/4 :w-full mx-auto bg-red-400 py-8'>
+
+<div className='w-3/4 :w-full mx-auto py-8'>
             <h1 className='font-bold text-center capitalize text-2xl mb-7'>Connectez-Vous</h1>
               <form>
                    <div className=''>
@@ -19,15 +19,14 @@ const Logout = () => {
                                 <input  type="checkbox" id="vehi"/>
                                 Se Souvenir de moi 
                             </label>
-                            <a href='#'>mot de passe oublié?</a>
+                            <a className='underline underline-offset-1' href='#'>mot de passe oublié?</a>
                         </div>
                        
-                        <input className='bg-black w-3/4 mx-auto block text-white py-2 mb-7' type= 'submit' value= 'Connexion'/>
+                        <input className='bg-dark-low w-3/4 mx-auto block hover:bg-gray-low text-white py-2 mb-7' type= 'submit' value= 'Connexion'/>
                         
                     </div>
                 </form>
         </div>
-        </Layout>
         
     );
 };

@@ -1,5 +1,6 @@
+import react from 'react'
+import Layout from './components/Dashboard/Layout';
 
-import Oders from './components/Dashboard/Oders';
 
 
 
@@ -8,7 +9,7 @@ function App() {
 
   return (
   <div>
-  <Oders/>
+  <Layout/>
   </div>
   );
 }
