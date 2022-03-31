@@ -12,6 +12,7 @@ import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
 import Contact from './components/contact/Contact';
+import Index from './components/products/Index';
 
 ReactDOM.render(
 
@@ -21,7 +22,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Layout />} />
       <Route path="expenses" element={<Cart />} />
-      <Route path="invoices" element={<Cart />} />
+      <Route path="products" element={<Index />} />
       <Route path="Contact" element={<Contact/>} />
     </Routes>
   </BrowserRouter>
