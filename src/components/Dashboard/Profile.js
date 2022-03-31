@@ -1,36 +1,53 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Profile = () => {
     return (
-                    <div>
-                        <h3 className='text-center mt-10 pt-10'>Details du compte</h3>
-
-                               <form className='text-center border border-gray-600 ml-10 mr-10 '>
-                                    <label htmlFor="name">nom</label><br/>
-                                    <input type="text" className="form-control"  placeholder='nom'/><br/>                               
-                                    <label htmlFor="name">prenom</label><br/>
-                                    <input type="text" className="form-control" placeholder='prenom' /><br/>
-                                
-                                    <label htmlFor="name">nom d'utilisateur</label><br/>
-                                    <input type="text" className="form-control"/><br/>
-                                
-                                    <label htmlFor="exampleInputEmail1">Email</label><br/>
-                                    <input type="email" className="form-control" placeholder='email' /><br/> <br/>
-                                
-                                   <div className='border-4 border-gray-600'>
-                                        <label htmlFor="name">ancien mot de passe</label><br/>
-                                        <input type="text" className="form-control" /><br/>
-                                    
-                                        <label htmlFor="name">nouveau mot de passe</label><br/>
-                                        <input type="text"  className="form-control"  /><br/>
-                                
-                                        <label htmlFor="name">confirmer le mot de passe</label><br/>
-                                        <input type="text" className="form-control" /><br/>
-                                  </div>
-                                <button type="submit" className="">Enregistrer</button>
-                            </form>
-
+        <div className='mx-auto ml-28 mb-7'>
+            <h1 className='font-bold text-2xl pb-7' ><FontAwesomeIcon icon={faUser} /> Account Details</h1>
+            
+                <form>
+                    <div className=''>
+                        <div className='flex mx-auto items-center'>
+                                <div>
+                                    <label> Nom <em className='text-red'>*</em></label><br />
+                                    <input className='w-3/4' type="text" name="name" required="required" />
+                                </div>
+                            <div className=''>
+                                    <label> prenom <em className='text-red'>*</em></label><br />
+                                    <input className='w-3/4 ' type="text" name="prenom" required="required" />
+                            </div>
+                        </div>
+                            <div>
+                                <label className=''>Nom_utilisateur <em className='text-red'>*</em></label><br />
+                                <input className='w-3/4' type="text" name="user-name" required="required" />
+                            </div>
+                            <div>
+                                <label className=''> Email <em className='text-red'>*</em></label><br />
+                                <input className='w-3/4' type="text" name="email" required="required" />
+                            </div>
+                    </div> 
+                    <div className='mt-10 border border-'>
+                        <div className='ml-4 mb-4'>
+                            <h1 className='font-bold text-2xl py-5'>Modifier mot de passe</h1>
+                            <div className='pb-4'>
+                                    <label>Ancien mot de passe (ne rien ecrire si vous ne voulez pas modifier)</label><br />
+                                    <input className='w-3/4' type="text" name="name" />
+                            </div>
+                            <div className='pb-4'>
+                                    <label>Nouveau mot de passe (ne rien ecrire si vous ne voulez pas modifier)</label><br />
+                                    <input className='w-3/4' type="text" name="name" />
+                            </div>
+                            <div>
+                                        <label>Confirmé mot de passe</label><br />
+                                        <input className='w-3/4' type="text" name="name" />
+                            </div>
+                        </div>
                     </div>
+                    <input className='mt-5 py-2 bg-dark-low text-white hover:bg-gray-low rounded' type='submit' value='ENREGISTRER' />
+                </form>
+        </div>
     );
 };
 

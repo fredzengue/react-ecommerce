@@ -1,23 +1,13 @@
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import react from 'react'
+import Layout from './components/Dashboard/Layout';
 
 
 
 //import flag icon
 
-import Flags from 'country-flag-icons/react/3x2';
-
-
-//import translation 
-import { useTranslation, Trans } from 'react-i18next';
-const lngs = {
-  en: { nativeName: 'English' },
-  fr: { nativeName: 'French' }
-};
 
 function App() {
-  const { t, i18n } = useTranslation();
+  
 
   return (
   <div className='flex'>
