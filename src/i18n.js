@@ -26,6 +26,10 @@ i18n
           layout:{
               search_placeholder: 'search',
               contact_info_title: 'call us now'
+          },
+          contact:{
+              title_1: 'Contact Info',
+              contact_info_title: 'call us now'
           }
 
         }
@@ -39,7 +43,11 @@ i18n
         layout: {
             search_placeholder: 'recherche',
             contact_info_title: 'contactez nous'
-            }
+            },
+          contact:{
+            title_1: 'Nos coordonnées',
+            contact_info_title: 'call us now'
+          }
         }
       }
     }

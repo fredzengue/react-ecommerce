@@ -11,15 +11,21 @@ import {
 import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
-import Logout from './components/Dashboard/Logout';
-import App from './App';
-
-
+import Contact from './components/contact/Contact';
+import Index from './components/products/Index';
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <App/>
+    
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />} />
+      <Route path="expenses" element={<Cart />} />
+      <Route path="products" element={<Index />} />
+      <Route path="Contact" element={<Contact/>} />
+    </Routes>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
