@@ -52,47 +52,50 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <div className='my-4 flex justify-between gap-x-4'>
-                    <div className='w-1/4'>
-                        <ul className=''>
-                            <Collapse title='categories'>
-                                <ul>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                </ul>
-                            </Collapse>
-                            <Collapse title='prices'>
-                                <ul>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                </ul>
-                            </Collapse>
-                            <Collapse title='colors'>
-                                <ul>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                </ul>
-                            </Collapse>
-                            <Collapse title='sizes'>
-                                <ul>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                </ul>
-                            </Collapse>
-                            <Collapse title='features'>
-                                <ul>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                    <li className='py-1'>Accessories(3)</li>
-                                </ul>
-                            </Collapse>
-                        </ul>
-                    </div>
-                    <div className='grid w-3/4 grid-cols-4 gap-4'>
+                <div className='my-4 flex justify-between items-start gap-x-4'>
+                    {show_filter ?
+                        <div className='w-1/4'>
+                            <ul className=''>
+                                <Collapse title='categories'>
+                                    <ul>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                    </ul>
+                                </Collapse>
+                                <Collapse title='prices'>
+                                    <ul>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                    </ul>
+                                </Collapse>
+                                <Collapse title='colors'>
+                                    <ul>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                    </ul>
+                                </Collapse>
+                                <Collapse title='sizes'>
+                                    <ul>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                    </ul>
+                                </Collapse>
+                                <Collapse title='features'>
+                                    <ul>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                        <li className='py-1'>Accessories(3)</li>
+                                    </ul>
+                                </Collapse>
+                            </ul>
+                        </div>
+                        : null
+                    }
+                    <div className={show_filter ? 'grid w-full grid-cols-4 gap-4' : 'grid  grid-cols-4 gap-4'}>
                         <div className='border border-divider text-center'>
                             <div className='relative cursor-pointer'>
                                 <div className='absolute z-10 pl-2'>
