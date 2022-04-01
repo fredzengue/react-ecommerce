@@ -11,9 +11,9 @@ import {
 import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
-
-import Profile from './components/Dashboard/Profile';
-import { Dashboard } from '@mui/icons-material';
+import Contact from './components/contact/Contact';
+import Index from './components/products/Index';
+import Show from './components/products/Show';
 
 ReactDOM.render(
 
@@ -22,7 +22,7 @@ ReactDOM.render(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />} />
-      <Route path="expenses" element={<Cart />} />
+      <Route path="product" element={<Show />} />
       <Route path="products" element={<Index />} />
       <Route path="Contact" element={<Contact/>} />
       <Route path="Contact" element={<Profile/>} />
