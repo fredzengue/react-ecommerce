@@ -12,11 +12,18 @@ import { faListUl } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Slider from '@mui/material/Slider';
 
 import CustomSelect from '../utilities/CustomSelect'
 import Collapse from '../utilities/Collapse'
 export default function Index() {
     const [show_filter, setFilter] = useState(false)
+    const [value, setValue] = useState([2, 10]);
+    const rangeSelector = (event, newValue) => {
+        setValue(newValue);
+        console.log(newValue)
+    };
     return (
         <Layout>
             <div className='h-[300px] bg-electronic_product'>
@@ -64,25 +71,39 @@ export default function Index() {
                                     </ul>
                                 </Collapse>
                                 <Collapse title='prices'>
-                                    <ul>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                    </ul>
+                                    <Slider
+                                        value={value}
+                                        onChange={rangeSelector}
+                                        sx={{
+                                            color: '#08C',
+                                        }}
+                                    />
+                                    <div className='flex justify-between pt-4'>
+                                        <h1 className='text-sm capitalize text-gray-middle'>price: {value[0]}&euro; - {value[1]}&euro;</h1>
+                                        <button className='bg-blue text-white py-1 px-2 uppercase text-sm'>filter</button>
+                                    </div>
                                 </Collapse>
                                 <Collapse title='colors'>
-                                    <ul>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                    </ul>
+                                    <div className='grid grid-cols-5 gap-1'>
+                                        <span className='cursor-pointer bg-dark-low w-[30px] h-[30px] text-center leading-7'><FontAwesomeIcon icon={faCheck} className='text-white' /></span>
+                                        <span className='cursor-pointer bg-blue w-[30px] h-[30px] '></span>
+                                        <span className='cursor-pointer bg-red w-[30px] h-[30px] '></span>
+                                        <span className='cursor-pointer bg-green w-[30px] h-[30px] '></span>
+                                        <span className='cursor-pointer bg-green w-[30px] h-[30px] '></span>
+                                        <span className='cursor-pointer bg-green w-[30px] h-[30px] '></span>
+                                        <span className='cursor-pointer bg-green w-[30px] h-[30px] '></span>
+                                    </div>
                                 </Collapse>
                                 <Collapse title='sizes'>
-                                    <ul>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                        <li className='py-1'>Accessories(3)</li>
-                                    </ul>
+                                    <div className='grid grid-cols-4 gap-1'>
+                                        <span className='cursor-pointer text-center uppercase border bg-blue border-blue text-white text-sm py-1 px-2'>ls</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>xl</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>s</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>xxl</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>xxxl</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>l</span>
+                                        <span className='cursor-pointer text-center uppercase border border-divider hover:bg-blue hover:border-blue hover:text-white text-gray-strong text-sm py-1 px-2'>m</span>
+                                    </div>
                                 </Collapse>
                                 <Collapse title='features'>
                                     <ul>
