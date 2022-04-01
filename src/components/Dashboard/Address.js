@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faLocation, faLocationPin, faLocationPinLock } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const Address = () => {
     return (
@@ -11,12 +13,12 @@ const Address = () => {
                         <div>
                             <h3 className='font-bold'>Billing address</h3>
                             <p className='pb-10'>You have not set up this type of address yet.</p>
-                            <a href='#' className=' bg-[#e7e7e7] hover:bg-gray-strong'>ADD ADDRESS</a>
+                            <a href='' className=' bg-[#e7e7e7] hover:bg-gray-strong'>ADD ADDRESS</a>
                         </div>
                         <div>
                             <h3 className='font-bold'>Shipping address</h3>
                             <p className='pb-10'>You have not set up this type of address yet.</p>
-                            <a href='#' className=' bg-[#e7e7e7] hover:bg-gray-strong'>ADD ADDRESS</a>
+                            <a href='' className=' bg-[#e7e7e7] hover:bg-gray-strong'>ADD ADDRESS</a>
                         </div>
                 </div>
                 

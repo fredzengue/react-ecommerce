@@ -11,8 +11,9 @@ import {
 import Cart from './components/cart/Index'
 // import i18n (translation library))
 import './i18n';
-import Contact from './components/contact/Contact';
-import Index from './components/products/Index';
+
+import Profile from './components/Dashboard/Profile';
+import { Dashboard } from '@mui/icons-material';
 
 ReactDOM.render(
 
@@ -24,6 +25,11 @@ ReactDOM.render(
       <Route path="expenses" element={<Cart />} />
       <Route path="products" element={<Index />} />
       <Route path="Contact" element={<Contact/>} />
+      <Route path="Contact" element={<Profile/>} />
+      <Route path="dashbord" element={<Dashboard/>} />
+      
+      
+      
     </Routes>
   </BrowserRouter>
   </React.StrictMode>,
